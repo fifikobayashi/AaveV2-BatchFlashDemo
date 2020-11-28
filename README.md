@@ -64,6 +64,7 @@ All of these fees need to be sitting ON THIS CONTRACT before you execute this ba
  
  - Get your batch flash array sizes right, otherwise you'll get a null pointer induced revert.
 
+I'll keep adding to this list as I troubleshoot them.
 <br /><br /><br /><br />
 
 That's about it! Have fun coming up with unique use cases on how to leverage all this concurrent flash liquidity. 
