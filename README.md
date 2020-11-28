@@ -1,6 +1,6 @@
 # Aave V2 Batch Flash Demo
 
-This is a remix-friendly example contract based on [David T's guide](https://docs.aave.com/v2/-MJXUluJ2u1DiL-VU6MM/guides/flash-loans) that demonstrates the execution of a Batch Flash Loan transaction. This particular example also interacts with the Aave V2 protocol with the batch flashed AAVE/DAI/LINK liquidity. 
+This is a remix-friendly example contract based on [David T's guide](https://docs.aave.com/v2/-MJXUluJ2u1DiL-VU6MM/guides/flash-loans) that demonstrates the execution of a Batch Flash Loan transaction. This particular example also interacts with the Aave V2 protocol using the batch flashed AAVE/DAI/LINK liquidity. 
 
 Within the AAVE/DAI/LINK Batch Flash, this example atomically calls on @AaveAave V2's lending pools to:
 - Deposit the batch flash liquidity onto the lending pools as collateral
