@@ -23,6 +23,7 @@ Think of Batch Flash Loans as a Flash Loan Buffet where you can pick and choose 
 4. Once the contract is published you need to manually transfer some DAI, AAVE and LINK to the contract you just created to cover the batch flash fees. The minimum amount to be transferred depends on how much you flash in the next step.
 5. Expand the executeFlashLoans function, which asks you how much AAVE/DAI/LINK you want to batch flash. Some figures that worked on kovan were 100 AAVE, 500k DAI and 10k LINK.
 ```
+REMEMBER:
 If you flash 100 AAVE, the 9bps fee is 0.09 AAVE
 If you flash 500,000 DAI, the 9bps fee is 450 DAI
 If you flash 10,000 LINK, the 9bps fee is 45 LINK
