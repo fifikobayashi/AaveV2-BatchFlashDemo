@@ -63,13 +63,13 @@ All of these fees need to be sitting ON THIS CONTRACT before you execute this ba
     * not using the right DAI reserve address for Aave V2 on kovan
  
  - Get your batch flash array sizes right, otherwise you'll get a null pointer induced revert.
- 
- 
- 
- 
 
+<br /><br /><br /><br />
 
-<br /><br />
+That's about it! Have fun coming up with unique use cases on how to leverage all this concurrent flash liquidity. 
+
+Some obvious ones include a Batch Flash contract that is tied to all your active loans across multiple DeFi protocols and when triggered it simultaneously closes them all via concurrent self liquidation transactions.
+ 
 If you found this useful and would like to send me some gas money: 
 ```
 0xef03254aBC88C81Cb822b5E4DCDf22D55645bCe6
