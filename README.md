@@ -1,16 +1,14 @@
 # Aave V2 Batch Flash Demo
 
-This is a remix-friendly example contract based on [David T's guide](https://docs.aave.com/v2/-MJXUluJ2u1DiL-VU6MM/guides/flash-loans) that executes a Batch Flash Loan on Aave V2. 
+This is a remix-friendly example contract based on [David T's guide](https://docs.aave.com/v2/-MJXUluJ2u1DiL-VU6MM/guides/flash-loans) that demonstrates the execution of a Batch Flash Loan transaction. This particular example also interacts with the Aave V2 protocol with the batch flashed AAVE/DAI/LINK liquidity. 
 
-In addition, within the AAVE/DAI/LINK Flash Batch tx this example also atomically calls on @AaveAave V2's lending pools to:
+Within the AAVE/DAI/LINK Batch Flash, this example atomically calls on @AaveAave V2's lending pools to:
 - Deposit the batch flash liquidity onto the lending pools as collateral
 - Borrow additional LINK tokens on stable rate mode based on the deposited collateral
 - Repay the debt to unlock collateral
 - Withdraw the collateral and use it to repay the Batch Flash Loan
 
 All in one single transaction.
-
-## Background
 
 Think of Batch Flash Loans as a Flash Loan Buffet where you can pick and choose what assets you want to flash loan, and then pack them together onto the same plate (transaction) so you can leverage multiple flash liquidity concurrently.
 
@@ -47,12 +45,27 @@ All of these fees need to be sitting ON THIS CONTRACT before you execute this ba
 
 ![](https://github.com/fifikobayashi/AaveV2-BatchFlashDemo/blob/main/img/3.%20rugpull.PNG)
 
-## Common Issues
+## Common Issues and Things of Note
 
 - Fail with error '1' - lending pool issue i.e you're trying to flash more than the pool reserves
 - Fail with error '8' - when you've used a borrow rate that does not exist
 - Fail with error '18' - error relating to switching borrow rate modes
-- Fail with error 'SafeERC20: low-level call failed' - could be many things, including not having enough tokens sitting on the contract to cover the flash fee or not having set the appropriate spending limits via approve().
+- Fail with error 'SafeERC20: low-level call failed' - could be many things, including:
+    
+    * not having enough tokens sitting on the contract to cover the flash fee
+    
+    * not having set the appropriate spending limits via approve()
+    
+    * deploying the contract with the wrong LendingPoolAddressProvider
+    
+    * not using the right DAI reserve address for Aave V2 on kovan
+ 
+ - Get your batch flash array sizes right, otherwise you'll get a null pointer induced revert.
+ 
+ 
+ 
+ 
+
 
 <br /><br />
 If you found this useful and would like to send me some gas money: 
