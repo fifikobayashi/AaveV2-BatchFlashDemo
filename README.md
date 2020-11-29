@@ -66,7 +66,7 @@ All of these fees need to be sitting ON THIS CONTRACT before you execute this ba
 
 I'll keep adding to this list as I troubleshoot them.
 
-Update: thanks to [Zer0dot](https://twitter.com/Zer0dots), the full list of errors can be located [here](https://kovan.etherscan.io/address/0xbF3f2372E6073FCf31d16212A471b36cDb8D6071#code).
+***Update:*** thanks to [Zer0dot](https://twitter.com/Zer0dots), the full list of errors can be located [here](https://kovan.etherscan.io/address/0xbF3f2372E6073FCf31d16212A471b36cDb8D6071#code).
 ```
  * @dev Error messages prefix glossary:
  *  - VL = ValidationLogic
