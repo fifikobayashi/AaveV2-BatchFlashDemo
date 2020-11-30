@@ -41,7 +41,7 @@ All of these fees need to be sitting ON THIS CONTRACT before you execute this ba
 - Repays batch flash loan including the 9bps fee for each asset
 ```
 
-7. If all goes well, it should [look like this on etherscan](https://kovan.etherscan.io/tx/0x395c7dfc7c3fd9eadf0f13f698880cecc98d9de5e9de1124d279474671d45ce0).
+7. If all goes well, it should [look like this on etherscan](https://kovan.etherscan.io/tx/0x395c7dfc7c3fd9eadf0f13f698880cecc98d9de5e9de1124d279474671d45ce0) or [like this in more detail](https://ethtx.info/kovan/0x395c7dfc7c3fd9eadf0f13f698880cecc98d9de5e9de1124d279474671d45ce0).
 
 8. When you're done playing with this contract just call rugPull() to pull all your ERC20 tokens from the contract. Otherwise you'll run out of test tokens very quickly.
 
